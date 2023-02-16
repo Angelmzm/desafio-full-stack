@@ -5,11 +5,8 @@ import contactUpdateService from "../../services/contacts/contactUpdate.service"
 
 const contactUpdateController= async (req:Request, res: Response) => {
     try {
-        const{id, name, email, number}= req.body
 
-        const updatedContact= await contactUpdateService(id,{name, email, number})
-
-        return res.json(updatedContact)
+        return res.json()
 
     } catch (err) {
         if (err instanceof AppError) {
